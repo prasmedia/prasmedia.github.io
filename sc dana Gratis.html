@@ -1,0 +1,548 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+       <link rel="stylesheet" href="games1.css" type="text/css" media="all" />
+       <style type="text/css" media="all">
+         .tinggi-konten{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #fff;
+}
+#offcanvasBottomLabel{
+  font-size: 16px;
+  text-align: center;
+  margin-left: 25%;
+  opacity: 0.6;
+  margin-top: -15%;
+}
+.jarakKlik{
+  width: 100%;
+  min-height: 7px;
+  opacity: 0.090;
+  background-color: white;
+}
+.dataKlik{
+  width: 102%;
+  height: 200%;
+  background-color: white;
+  position: absolute;
+  margin-left: -5%;
+  margin-top: -5%;
+  padding-top: 3%;
+}
+.tinggi-konten{
+  margin-top: -65%;
+  height: auto;
+  background-color: white;
+}
+.dataKlik h2{
+  margin-left: 5%;
+  font-size: 14px;
+  opacity: 0.8;
+  float: left;
+}
+.dataKlik h3{
+  margin-left: 5%;
+  font-size: 17px;
+  opacity: 0.8;
+}
+.dataKlik h5{
+  font-size: 14px;
+  margin-left: 5%;
+  float: left;
+  border: 1px solid #26A795;
+  padding: 4px;
+  border-radius: 5px;
+  margin-right: 0.5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  font-weight: normal;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+}
+.dataKlik h5:hover{
+  background-color: #fff;
+  color: white;
+}
+
+.dataKlik p{
+  margin-left: 5%;
+  font-size: 14px;
+  opacity: 0.6;
+  text-align: right;
+  margin-right: 6%;
+}
+.cleaning{
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 2%;
+  border: none;
+  background-color: #15222A;
+  color: white;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 2%;
+  border: 1px solid green;
+}
+.postdata{
+  margin-top: 2%;
+  width: 40%;
+  float: left;
+  margin-left: 5%;
+  margin-right: 2%;
+  border: none;
+  background-color: #15222A;
+  color: white;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid red;
+}
+
+.bg-header{
+  width: 100%;
+  height: auto;
+}
+.bg-header img{
+  width: 100%;
+  min-height: 100px;
+}
+#alertId{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(23,23,23,0.478);
+  z-index: 100;
+  top: 0;
+  margin: 0;
+  overflow: hidden;
+  display: none;
+}
+#alertId img{
+  width: 100%;
+  min-height: 100px;
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  background: fixed;
+}
+.input_form{
+  width: 96%;
+  min-height: 150px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #42a5f5,  #fff);
+  color: black;
+  margin-left: 2%;
+  padding-top: 5%;
+  padding-bottom: 8%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+.input_form h2{
+  text-align: left;
+  font-size: 18px;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+.input_form p{
+  font-size: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  opacity: 0.7;
+}
+.input_form h1{
+  text-align: left;
+  margin-left: 5%;
+  font-size: 16px;
+  margin-top: 5%;
+}
+
+.info_alert{
+  min-width: 22px;
+  min-height: 22px;
+  position: absolute;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  margin-left: 55%;
+  margin-top: -11%;
+  display:table;
+}
+.info_alert h3{
+  font-size: 15px;
+  text-align: center;
+  display:table-cell; 
+  vertical-align: middle; 
+}
+
+#userId{
+  width: 90%;
+  float: left;
+  margin-right: 5%;
+  margin-left: 5%;
+  outline: none;
+  padding-left: 2.5%;
+  min-height: 45px;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid red;
+}
+
+#alertId h1{
+  margin-top: 30%;
+  font-size: 30px;
+  z-index: 100;
+  text-align: center;
+  color: yellow;
+}
+
+.btn-down{
+  bottom: 0;
+  width: 100%;
+  min-height: 60px;
+  background-color: black;
+  position: fixed;
+  padding-top: 3%;
+  display: fixed;
+  z-index: 10;
+}
+.btn-down button{
+  width: 80%;
+  margin-left: 10%;
+  background-color:#000 ;
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  color: white;
+  outline: none;
+}
+.btn-down button:hover, .info_alert:hover{
+  background-color: green;
+}
+/* produk */
+.bg-produk{
+  background-color: #42a5f5;
+  width: 96%;
+  margin-top: 5%;
+  min-height: 100%;
+  padding-top: 5%;
+  margin-left: 2%;
+  border-radius: 10px;
+}
+.produk{
+  width: 95%;
+  min-height: auto;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 5%;
+  padding: 1%;
+  padding-top: 5%;
+  padding-bottom: 1%;
+  float: left;
+  color: black; 
+  background-image: linear-gradient(to bottom, #fff,  #fff);
+  border-radius: 5px;
+   border: 1px solid #aeaeae;
+ /* box-shadow:rgb(222,222,222) 0px 1px 3px 1px ;*/
+}
+.produk h5{
+  font-size: 15px;
+  margin-left: 5%;
+  opacity: 0.7;
+}
+.produk p{
+  margin-left: 70%;
+  margin-top: -10%;
+  font-weight: bold;
+}
+
+#alertUserId{
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+  margin-top: 13%;
+  margin-left: 5%;
+}
+#alertUserId2{
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+  margin-top: 1%;
+  margin-left: 60%;
+}
+
+.jarakHr{
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  margin-top: -10%;
+  margin-bottom: 5%;
+}
+.informasi-warning{
+  width: 100%;
+  height: auto;
+}
+.box-info{
+  width: 94%;
+  height: auto;
+  box-shadow:rgb(222,222,222) 0px 1px 3px 1px ;
+  border-radius: 5px;
+  padding: 5%;
+}
+.box-info p{
+  font-size: 10px;
+}
+       </style>
+    <title>DANA</title>
+    <body style="background-color: #fff;">
+  <section class="bg-header">
+    <img src="https://i.ibb.co/52Yx3V2/images-6-1.png" alt="" />
+  </section>
+  
+  <!-- BAGIAN HEADER --> 
+   <form class="input_form" action="" method="get" accept-charset="utf-8">
+     <h2>NO REKENING</h2>
+     </div>
+     <input type="number" name="" id="userId" value="" placeholder="NO REKENING" oninput="userid()" autofocus=""/>
+     <p id="alertUserId"></p>
+   </form>
+   <section class="bg-produk">
+   				
+     <!-- PRODUK 1 -->
+     <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="bg98" onclick="cetakBarang(hargaBarang, namaBarang, urlBarang)"  class="produk">
+       <h5 id="nama_barang">SALDO 50.000</h5>
+       <p id="harga_barang">Rp50.700</p>
+       <a id="url_barang" href="link6"></a>
+     </div>
+    
+     
+     <!-- PRODUK 2 -->
+     <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="bg101" onclick="cetakBarang(hargaBarang1, namaBarang1, urlBarang1)"  class="produk">
+       <h5 id="nama_barang1">SALDO 80.000</h5>
+       <p id="harga_barang1">Rp80.700</p>
+       <a id="url_barang1" href="link"></a>
+     </div>
+     
+     <!-- PRODUK 3 -->
+     <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="bg102" onclick="cetakBarang(hargaBarang2, namaBarang2, urlBarang2)"  class="produk">
+       <h5 id="nama_barang2">SALDO 100.000</h5>
+       <p id="harga_barang2">Rp100.750</p>
+       <a id="url_barang2" href="link"></a>
+     </div>
+     
+     <!-- 4 -->
+     <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="bg103" onclick="cetakBarang(hargaBarang3, namaBarang3, urlBarang3)" class="produk">
+       <h5 id="nama_barang3">SALDO 200.000</h5>
+       <p id="harga_barang3">Rp200.600</p>
+       <a id="url_barang3" href="link"></a>
+     </div>
+     
+     <!-- 5 -->
+     <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="bg104" onclick="cetakBarang(hargaBarang4, namaBarang4, urlBarang4)" class="produk">
+       <h5 id="nama_barang4">SALDO 250.000</h5>
+       <p id="harga_barang4">Rp-</p>
+       <a id="url_barang4" href=""></a>
+        </div>
+        
+        <!-- 6 -->
+     <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="bg105" onclick="cetakBarang(hargaBarang5, namaBarang5, urlBarang5)" class="produk">
+       <h5 id="nama_barang5">SALDO 500.000</h5>
+       <p id="harga_barang5">Rp-</p>
+       <a id="url_barang5" href=""></a>
+     </div>
+     
+     <!-- 7 -->
+     <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" id="bg106" onclick="cetakBarang(hargaBarang6, namaBarang6, urlBarang6)" class="produk">
+       <h5 id="nama_barang6">SALDO 1.000.000</h5>
+       <p id="harga_barang6">Rp-</p>
+       <a id="url_barang6" href=""></a>
+     </div>
+     
+    
+     
+     
+   
+     <div style="clear:both;">
+   </div>
+   </section>
+   
+   <div style="clear:both;">
+   </div>
+   
+   <br /><br /><br />
+   
+    <div  class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: #15222A; color: white;">
+  <div style="background-color:  #15222A" class="offcanvas-header tinggi-konten">
+    <!-- Konten header canvas !-->
+    <h5 class="offcanvas-title" id="offcanvasBottomLabel">
+      
+    </h5>
+  </div>
+  <div style="background-color: #15222A;" class="offcanvas-body medium">
+    <div style="background-color: #15222A;" class="dataKlik">
+    <h2>Nomor ID :</h2>
+    <p id="id-post-User">none</p>
+    <h2>Produk :</h2>
+    <p id="beliPulsa">SALDO</p>
+    <p style="display:none;" id="tesUrl"></p>
+    <div style="clear:both;">
+    </div>
+     <hr class="jarakKlik"/>
+    <h3>Detail pembayaran :</h3>
+    <h2>Harga :</h2>
+    <p id="harga_post_barang">none</p>
+    <h2>Nama Barang :</h2>
+    <p id="nama_post_barang">none</p>
+    <h2>Diskon & Potongan:</h2>
+    <p id="metodePembayaran">Rp0</p>
+    <a id="linkUrl" href=""></a>
+    <div style="border-bottom:1px dashed rgb(197,197,197);">
+    </div>
+    
+    
+    <h2 style="color: white; margin-top: 4%; font-size: 16px; margin-left:4%; opacity:1;">Total Pembayaran:</h2>
+    
+    <p id="totalTagihan" style="color: white; margin-top: 4%; font-size: 16px; opacity:1;">none</p>
+    
+    <button class="cleaning" type="button" data-bs-dismiss="offcanvas" aria-label="Close">Ubah</button>
+    
+    <button type="button" class="postdata" onclick="kirimData()">Lanjutkan</button>
+    </div>
+  </div>
+</div>
+
+    <script type="text/javascript" charset="utf-8">
+       let alert_help = document.getElementById('alertId');
+ // buat rancangan function
+// aktifkan semua konten
+function aktifkan(e) {
+e.style.display = "block";
+}
+// matikan semua konten
+function matikan(e) {
+e.style.display = "none";
+}
+
+// cek inputan user id
+document.getElementById('userId').addEventListener('input', function (e) {
+ e.target.value = e.target.value.toString().replace(/[^0-9]/g,).substring(0, 20).trim();
+});
+
+// eksekusi hasil inputas user id
+function userid() {
+   let x = document.getElementById('userId');
+   let text = document.getElementById('alertUserId');
+   
+   if (x.value.length < 6) {
+     text.innerHTML = "Periksa Kembali, Nomor rekening Salah";
+     x.style = "border: 1px solid red;";
+     text.style = "color: red;";
+   }else if (x.value.length > 11){
+     text.innerHTML = "Oke nomor rekening benar";
+     text.style = "color: green;";
+     x.style = "border: 1px solid green;";
+   }
+}
+
+
+// ambil data dari halaman Html, jika pakai hosting gak perlu lakukan ini cukup lakukan query database kalau kamu mau pakai api key cukup gunakan foreach
+// produk  
+let hargaBarang = document.getElementById("harga_barang").innerHTML;
+let namaBarang = document.getElementById("nama_barang").innerHTML;
+let urlBarang = document.getElementById("url_barang").href;
+
+// produk 1
+let hargaBarang1 = document.getElementById("harga_barang1").innerHTML;
+let namaBarang1 = document.getElementById("nama_barang1").innerHTML;
+let urlBarang1 = document.getElementById("url_barang1").href;
+
+// produk 2
+let hargaBarang2 = document.getElementById("harga_barang2").innerHTML;
+let namaBarang2 = document.getElementById("nama_barang2").innerHTML;
+let urlBarang2 = document.getElementById("url_barang2").href;
+
+// produk 3
+let hargaBarang3 = document.getElementById("harga_barang3").innerHTML;
+let namaBarang3= document.getElementById("nama_barang3").innerHTML;
+let urlBarang3 = document.getElementById("url_barang3").href;
+
+// produk 4
+let hargaBarang4 = document.getElementById("harga_barang4").innerHTML;
+let namaBarang4 = document.getElementById("nama_barang4").innerHTML;
+let urlBarang4 = document.getElementById("url_barang4").href;
+
+// produk 5
+let hargaBarang5 = document.getElementById("harga_barang5").innerHTML;
+let namaBarang5 = document.getElementById("nama_barang5").innerHTML;
+let urlBarang5 = document.getElementById("url_barang5").href;
+
+// produk 6
+let hargaBarang6 = document.getElementById("harga_barang6").innerHTML;
+let namaBarang6 = document.getElementById("nama_barang6").innerHTML;
+let urlBarang6 = document.getElementById("url_barang6").href;
+
+
+
+// ambil data dari halaman Html, jika pakai hosting gak perlu lakukan cara di atas cukup lakukan query database kalau kamu mau pakai api key cukup gunakan foreach
+
+// 1. kalau mau nambah barang duplikat satu produk di atas 
+// 2. mulai dari nomor 20 duplikat semua dan beri nomor di akhirnya 21, 22, 23 san seterusnya. kemudian
+// 3. duplikat halaman htmlnya dan beri nomor sesuai dengan yang kamu buat di langkah nomor 2.
+// #catatan, jika data tidak sesuai, kemungkinan error sangat tinggi.
+// madika store frontend designer.
+
+
+
+ // variabel tempat menyimpan data
+ let urlLink = document.getElementById("linkUrl");
+ let cetakHarga =document.getElementById("harga_post_barang");
+ let cetakNama = document.getElementById("nama_post_barang");
+ let cetakIdUser = document.getElementById("id-post-User");
+ let totalTagihan = document.getElementById("totalTagihan");
+ 
+ // this produk
+function cetakBarang(harga, nama, url) {
+ let userId = document.getElementById("userId").value;
+cetakHarga.innerHTML = harga;
+cetakNama.innerHTML = nama;
+urlLink = url;
+cetakIdUser.innerHTML = userId;
+totalTagihan.innerHTML = harga;
+if (cetakIdUser.innerHTML == " " ||cetakIdUser.innerHTML == [] ) {
+  cetakIdUser.innerHTML = "none";
+}
+}
+
+
+function kirimData() {
+   // masukkan catatan parameter dari bukaolshop
+ const link = urlLink;
+ let userId = document.getElementById("userId").value;
+   const catatan = "?catatan=";
+
+  window.location.href=link+catatan+userId;
+ }
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src="games1.js"></script>
+  <script src="https://www.drv.tw/inc/wd.js?s=dslah5my8dkhmwzkmdgurg"></script></body>
+</html>
